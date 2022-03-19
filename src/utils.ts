@@ -5,7 +5,7 @@ import { Item } from './types';
 
 const sniperConfig = loadConfig();
 
-function loadConfig() {
+export function loadConfig() {
   const configPath = path.resolve(process.cwd(), 'dist', 'src', 'config.json');
   const configContents = fs.readFileSync(configPath, 'utf-8');
   const sniperConfig = JSON.parse(configContents);
@@ -13,7 +13,7 @@ function loadConfig() {
   return sniperConfig;
 }
 
-function postToDiscord(itemArray: Array<Item>): void {
+export function postToDiscord(itemArray: Array<Item>): void {
   const currentDate = new Date();
 
   const webhookParams = {
@@ -46,5 +46,3 @@ function postToDiscord(itemArray: Array<Item>): void {
     body: JSON.stringify(webhookParams),
   }).catch(() => console.error('[ERROR] Failed to send webhook'));
 }
-
-export { loadConfig, postToDiscord };
