@@ -35,7 +35,7 @@ function postToDiscord(itemArray: Array<Item>): void {
 
   itemArray.forEach((item: Item) => {
     webhookParams.embeds[0].fields.push({
-      name: `\`\`\` ${item.itemId} \`\`\``,
+      name: `\`${item.itemId}\``,
       value: `Price: $${item.price}\nSeller: ${item.seller}`,
     });
   });
