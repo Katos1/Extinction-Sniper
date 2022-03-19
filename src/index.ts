@@ -14,7 +14,7 @@ function handleResponse(apiItems: Array<Item>, itemContext: ConfigItem): void {
     return item.price <= itemContext.buyPrice && !knownItems.some((_item) => _item.id === item.id);
   });
 
-  if (cheapItems.length == 0) {
+  if (cheapItems.length === 0) {
     return;
   }
 

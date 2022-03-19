@@ -1,12 +1,12 @@
-export interface ItemData {
-  ammo: number;
-  ammoInClip: number;
+export interface ItemMetaData {
   id: number;
+  ammoInClip: number;
+  ammo: number;
 }
 
 export interface Item {
   id: number;
-  itemData?: ItemData;
+  itemData?: ItemMetaData;
   itemId: string;
   ownerId: number;
   price: number;
