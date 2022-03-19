@@ -1,0 +1,19 @@
+{
+  "name": "extinction-sniper",
+  "version": "1.0.1",
+  "main": "index.js",
+  "author": "Katos <75276519+Katos1@users.noreply.github.com>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node dist/src",
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "node-fetch": "^3.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "@types/node-fetch": "^2.6.1"
+  }
+}
